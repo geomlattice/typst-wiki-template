@@ -14,5 +14,5 @@ serve:
 
 upload:
 	git add src/*
-	git commit -m $(msg)
+	git commit -m "$(msg)"
 	git push
