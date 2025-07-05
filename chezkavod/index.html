@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Citation Chain Wiki</title>
+    <!-- Loads the full bundle or the lite version from jsdelivr -->
+    <!-- src="https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-all-in-one.ts@0.6.1-rc1/dist/esm/index.js" -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@myriaddreamin/typst.ts/dist/esm/contrib/all-in-one-lite.bundle.js"
+      id="typst"
+    ></script>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script>
+      const contentDiv = document.getElementById('content');
+      
+      // Exports SVG and puts it into the `contentDiv`
+      const previewSvg = mainContent => {
+        $typst.svg({ mainContent }).then(svg => {
+          console.log(`rendered! SvgElement { len: ${svg.length} }`);
+          // append svg text
+          contentDiv.innerHTML = svg;
+          
+          const svgElem = contentDiv.firstElementChild;
+          const width = Number.parseFloat(svgElem.getAttribute('width'));
+          const height = Number.parseFloat(svgElem.getAttribute('height'));
+          const cw = document.body.clientWidth - 40;
+          svgElem.setAttribute('width', cw);
+          svgElem.setAttribute('height', (height * cw) / width);
+        });
+      };
+      
+      /// Listens the 'load' event to initialize after loaded the bundle file from CDN (jsdelivr).
+      document.getElementById('typst').addEventListener('load', function () {
+        /// Initializes the Typst compiler and renderer. Since we use "all-in-one-lite.bundle.js" instead of
+        /// "all-in-one.bundle.js" we need to tell that the wasm module files can be loaded from CDN (jsdelivr).
+        $typst.setCompilerInitOptions({
+          getModule: () =>
+            'https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm',
+        });
+        $typst.setRendererInitOptions({
+          getModule: () =>
+            'https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
+        });
+        
+
+	fetch('./index.typ') 
+  		.then(response => {
+    			if (!response.ok) {
+      				throw new Error(`http error: ${response.status}`);
+    			}
+    			return response.text(); // Get the file content as plain text
+  		})
+  	.then(fileContent => {
+    		previewSvg(fileContent);
+  	})
+  	.catch(error => {
+    		console.error('Error loading the file:', error);
+    		contentDiv.innerHTML = `<p style="color: red;">Error loading document: ${error.message}</p>`;
+  	});
+
+      });
+    </script>
+    <style>
+      body {
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+	background-color: #262626; 
+	font-family: "DejaVu Sans Mono" 
+      }
+      #export {
+        width: 100%;
+        height: 20px;
+      }
+    </style>
+  </body>
+</html>
+

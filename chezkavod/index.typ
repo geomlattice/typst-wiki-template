@@ -1,6 +1,6 @@
 #set quote(block: true)
 #show link: set text(fill: blue)
-#set quote(block: true)
+#set text(fill: white, font: "DejaVu Sans Mono",  size: 10pt)
 
 #let title = align(center, text(17pt)[ *CitationChain chez Kavod*])
 #grid(
