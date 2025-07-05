@@ -10,7 +10,9 @@
   grid(
 	columns: (auto, 1fr),
 	[#pad(y: 10pt, text(title, size: 15pt, weight: "bold"))],
-	grid.hline(stroke: orange)
+	grid.hline(stroke: orange),
   )
+  let arrow = text("\u{2B05}", size: 15pt)
+  [#link("../../index.html")[$arrow$]]
   doc
 }
