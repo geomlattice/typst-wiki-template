@@ -25,5 +25,5 @@ Work by an Alexandrian of the Second or Third Century CE known as Diophantus foc
 
 == Citation Chain
 
-#link("../scholastic/Harriot-Magisteria_Magna-9783037190593.pdf")[9783037190593]: Thomas Harriots doctrine of triangular numbers : the Magisteria magna European Mathematical Society, Heritage of European mathematics, 2009 Janet Beery; Jacqueline A Stedall; European Mathematical Society https://f005.backblazeb2.com/file/wwwmdf/Thomas_Harriot_Triangle_Numbers-9783037190593.pdf
+#link("../scholastic/harriot-magisteria_magna-9783037190593.pdf")[9783037190593]: Thomas Harriots doctrine of triangular numbers : the Magisteria magna European Mathematical Society, Heritage of European mathematics, 2009 Janet Beery; Jacqueline A Stedall; European Mathematical Society https://f005.backblazeb2.com/file/wwwmdf/Thomas_Harriot_Triangle_Numbers-9783037190593.pdf
  
