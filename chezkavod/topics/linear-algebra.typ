@@ -2,8 +2,7 @@
 #set text(fill: white, font: "DejaVu Sans Mono",  size: 10pt)
 #set quote(block: true)
 #show link: set text(fill: blue)
-#show math.equation: set text(size: 12pt)
-
+#show math.equation: set text(size: 12pt, font: "STIX Two Math")
 
 #let title = align(center, text(12pt)[ *Linear Algebra* ])
 
