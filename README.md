@@ -1,6 +1,6 @@
 # Typst Wiki Template PDF Server 
 
-Typst is a modern typsetting language like latex, but offer code native execution, webassembly plugins, community templates, and a subscription based web platform with free options.
+Typst is a modern typsetting language like latex, but offers native code execution, webassembly plugins, community templates, and a subscription based web platform with free options.
 
 This Template uses free tools and is free to copy and use as your own. There are 3 ways to use this
 
