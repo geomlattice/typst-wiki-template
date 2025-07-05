@@ -10,6 +10,8 @@ for i in $COMPILE_TARGETS; do
 	echo $i
 	if [ $i == "./index.typ" ]; then 
 		typst compile --features html --format html $i "../dist/index.html"
+    		#cp "./index.html" "../dist" && cp $i "../dist"
+    		#echo "index is compiled later via html embedded javascript"
 	else
 		DIR=$(echo $i | cut -d '/' -f 2)
 		FILE=$(echo $i |cut -d '/' -f 3 | cut -d '.' -f 1)
