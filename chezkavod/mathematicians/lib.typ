@@ -13,6 +13,6 @@
 	grid.hline(stroke: orange),
   )
   let arrow = text("\u{2B05}", size: 15pt)
-  [#link("../../index.html")[$arrow$]]
+  [#link("../index.html")[$arrow$]]
   doc
 }
