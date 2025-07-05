@@ -2,7 +2,7 @@
 #show link: set text(fill: blue)
 #set text(fill: white, font: "DejaVu Sans Mono",  size: 10pt)
 
-#let title = align(center, text(17pt)[ *Wiki*])
+#let title = align(center, text(17pt)[ *Typst Wiki Template*])
 #grid(
   columns: (auto, 1fr),
   [#pad(y: 10pt, title)],
