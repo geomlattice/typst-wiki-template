@@ -50,7 +50,7 @@ jobs:
       - name: Upload Source Typst Code
         run: |
           mkdir ./dist/src
-          cp -r chezkavod ./dist/src
+          cp -r chezkavod/* ./dist/src
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
