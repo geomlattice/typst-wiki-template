@@ -10,7 +10,7 @@ for i in $COMPILE_TARGETS; do
 	echo $i
 	if [ $i == "./index.typ" ]; then 
 		#typst compile --features html --format html $i "../dist/index.html"
-    		cp "./index.html" "../dist" && cp $i "../dist"
+    		cp "./index.html" "../dist" && cp $i "../dist" && cp "../README.md" "../dist"
     		echo "index is compiled later via html embedded javascript"
 	elif [ $i == "./lib.typ" ]; then
 		echo "lib.typ should not be directly compiled"	
