@@ -1,0 +1,17 @@
+[package]
+name = "weike"
+version = "0.1.0"
+entrypoint = "template.typ"
+authors = ["geomlattice"]
+license = "MIT"
+description = "A simple dark slate theme for building wikis."
+repository = "https://github.com/geomlattice/weike"
+keywords = ["wiki", "dark theme"]
+categories = ["report"]
+disciplines = ["philosophy", "computer-science", "math", "history", "literature"]
+exclude = []
+
+[template]
+path = "template"
+entrypoint = "main.typ"
+thumbnail = "example.png"
