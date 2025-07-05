@@ -1,15 +1,11 @@
-#set page(paper: "a5", fill: rgb("#262626"))
-#set text(fill: white, font: "DejaVu Sans Mono",  size: 10pt)
-#set quote(block: true)
-#show link: set text(fill: blue)
+#import "lib.typ": wiki
 
-#let title = align(center, text(17pt)[ *Thomas Harriot* ])
-
-#grid(
-  columns: (auto, 1fr),
-  [#pad(y: 10pt, title)],
-  grid.hline(stroke: orange)
+#show: wiki.with(
+	title:[
+		Thomas Harriot
+	]
 )
+
 
 Thomas Harriot was one of those rare minds recounted in history who seems to presage the most modern insights in times long before we would expect their having come into being known. The sheer excellence of his work in what prefigures the Calculus so often attributed between Newton and Leibniz should need little introduction, but here we are nonetheless.
 

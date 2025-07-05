@@ -1,15 +1,9 @@
-#set page(paper: "a5", fill: rgb("#262626"))
-#set text(fill: white, font: "DejaVu Sans",  size: 10pt)
-#set quote(block: true)
-#show link: set text(fill: blue)
-#show math.equation: set text(size: 12pt, font: "DejaVu Math TeX Gyre")
+#import "lib.typ": wiki
 
-#let title = align(center, text(10pt)[ *Linear Algebra* ])
-
-#grid(
-  columns: (auto, 1fr),
-  [#pad(y: 10pt, title)],
-  grid.hline(stroke: orange)
+#show: wiki.with(
+	title:[
+		Linear Algebra
+	]
 )
 
 == Concept Index

@@ -1,14 +1,9 @@
-#set page(paper: "a5", fill: rgb("#262626"))
-#set text(fill: white, font: "DejaVu Sans Mono",  size: 10pt)
-#set quote(block: true)
-#show link: set text(fill: blue)
+#import "lib.typ": wiki
 
-#let title = align(center, text(17pt)[ *Stirling Numbers* ])
-
-#grid(
-  columns: (auto, 1fr),
-  [#pad(y: 10pt, title)],
-  grid.hline(stroke: orange)
+#show: wiki.with(
+	title:[
+		Stirling Numbers
+	]
 )
 
 #quote(attribution: [#link("https://f005.backblazeb2.com/file/wwwmdf/Commutation_Relations_Normal_Ordering_and_Stirling_Numbers-978-1-4665-7989-7.pdf#page=33")[9781466579897 pg 8 [^1]]])[
