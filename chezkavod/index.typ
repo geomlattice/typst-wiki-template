@@ -1,4 +1,3 @@
-#set text(font: "DejaVu Sans Mono", size: 10pt)
 #set quote(block: true)
 #show link: set text(fill: blue)
 #set quote(block: true)
