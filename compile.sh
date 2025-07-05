@@ -1,3 +1,6 @@
+mkdir -p dist/philosophers
+mkdir -p dist/mathematicians
+
 cd chezkavod
 COMPILE_TARGETS=$(find . -name "*.typ") 
 
