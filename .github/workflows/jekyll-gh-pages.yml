@@ -43,10 +43,10 @@ jobs:
       - name: Build Book
         run: |
           bash compile.sh
-      - name: Upload Source Typst Code
+      - name: Upload Typst Source Code
         run: |
-          mkdir ./dist/src
-          cp -r chezkavod/* ./dist/src
+          mkdir -p ./dist/src
+          cp -r src/* ./dist/src
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

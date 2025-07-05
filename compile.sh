@@ -3,7 +3,7 @@ mkdir -p dist/mathematicians
 mkdir -p dist/topics
 mkdir -p dist/scholastic
 
-cd chezkavod
+cd src
 COMPILE_TARGETS=$(find . -name "*.typ") 
 
 for i in $COMPILE_TARGETS; do 
