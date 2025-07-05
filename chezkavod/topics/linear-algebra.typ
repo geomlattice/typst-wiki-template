@@ -6,10 +6,6 @@
 	]
 )
 
-== Concept Index
-
-- inner product
-
 === Inner Product
 
 The inner product of two vectors x, y in K with dimension n is defined to be
