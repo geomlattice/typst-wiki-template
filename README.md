@@ -11,7 +11,7 @@ This Template uses free tools and is free to copy and use as your own. There are
 At bare minimum, you should git clone your new repo. There should be editors and previewers in various IDEs for Typst.
 
 So far, the wiki looks like this
-![Example]("./templates/coal-rust-monospace/example.png")
+![Example](templates/coal-rust-monospace/example.png)
 
 🏗️ `WORK IN PROGRESS` 🏗️
 
