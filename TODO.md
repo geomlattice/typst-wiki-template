@@ -1,6 +1,6 @@
 # TODO
 
-- [ ] Add Back Button
+- [x] Add Back Button
 - [ ] Explore Citations
 - [ ] Move Quote Structures to lib.typ/template.typ
 - [ ] Move Citation Structures to lib.typ/template.typ
