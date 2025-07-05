@@ -3,7 +3,7 @@
 #set quote(block: true)
 #show link: set text(fill: blue)
 
-#let title = align(center, text(17pt)[ *Linear Algebra* ])
+#let title = align(center, text(12pt)[ *Linear Algebra* ])
 
 #grid(
   columns: (auto, 1fr),
