@@ -14,10 +14,14 @@
 Soon, a Search Engine will be implemented over the text files before compilation to pdf with linkage to relevant pdf files. For now however, please refer to the index or use direct links.
 
 == Mathematicians
-#link("mathematicians/thomas-harriot.pdf")[Thomas Harriot]
+- #link("mathematicians/thomas-harriot.pdf")[Thomas Harriot]
+	=== Scholastic Reductions
+	- #link("scholastic/harriot_magisteria_magna-9783037190593.pdf")[Magisteria Magna]
+	=== Topics
+	- #link("topics/stirling-numbers.pdf")[Stirling Numbers]
 
 == Philosophers
-#link("philosophers/nicomachus-of-gerasa.pdf")[Nicomachus of Gerasa]
+- #link("philosophers/nicomachus-of-gerasa.pdf")[Nicomachus of Gerasa]
 
-== Topics
-#link("topics/linear-algebra.pdf")[Linear Algebra]
+== General Topics
+- #link("topics/linear-algebra.pdf")[Linear Algebra]
