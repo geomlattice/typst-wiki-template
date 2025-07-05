@@ -1,5 +1,22 @@
 # Typst Wiki Template PDF Server 
 
+Typst is a modern typsetting language like latex, but offer code native execution, webassembly plugins, community templates, and a subscription based web platform with free options.
+
+This Template uses free tools and is free to copy and use as your own. There are 3 ways to use this
+
+1. Local Only (No GitHub Pages)
+2. Local and Global (GithHub Pages and Rust Tools)
+3. Global Only (edit `./src` from git repo from a text editor with no need for `Makefile`)
+
+At bare minimum, you should git clone your new repo. There should be editors and previewers in various IDEs for Typst.
+
+So far, the wiki looks like this
+![Example]("./templates/coal-rust-monospace/example.png")
+
+🏗️ `WORK IN PROGRESS` 🏗️
+
+This repo is subject to a lot of change at present.
+
 ### Local Build Guide
 
 If you need rust
