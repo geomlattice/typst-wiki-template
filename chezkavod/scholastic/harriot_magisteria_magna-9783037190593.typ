@@ -1,4 +1,15 @@
-= Magisteria Magna
+#set page(paper: "a5", fill: rgb("#262626"))
+#set text(fill: white, font: "DejaVu Sans Mono",  size: 10pt)
+#set quote(block: true)
+#show link: set text(fill: blue)
+
+#let title = align(center, text(17pt)[ *Magisteria Magna* ])
+
+#grid(
+  columns: (auto, 1fr),
+  [#pad(y: 10pt, title)],
+  grid.hline(stroke: orange)
+)
 
 == Thomas Harriot
 
