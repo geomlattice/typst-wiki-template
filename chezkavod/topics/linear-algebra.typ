@@ -1,10 +1,10 @@
 #set page(paper: "a5", fill: rgb("#262626"))
-#set text(fill: white, font: "DejaVu Sans Mono",  size: 10pt)
+#set text(fill: white, font: "DejaVu Sans",  size: 10pt)
 #set quote(block: true)
 #show link: set text(fill: blue)
 #show math.equation: set text(size: 12pt, font: "DejaVu Math TeX Gyre")
 
-#let title = align(center, text(12pt)[ *Linear Algebra* ])
+#let title = align(center, text(10pt)[ *Linear Algebra* ])
 
 #grid(
   columns: (auto, 1fr),
