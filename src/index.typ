@@ -11,7 +11,7 @@
 
 #show link: set text(fill: blue)
 
-Soon, a Search Engine will be implemented over the text files before compilation to pdf with linkage to relevant pdf files. For now however, please refer to the index or use direct links.
+Soon, a Search Engine will be implemented over the text files before compilation to pdf with linkage to relevant pdf files. Maybe webassembly can be used to this end? For now however, please refer to the index or use direct links.
 
 == Mathematicians
 - #link("mathematicians/thomas-harriot.pdf")[Thomas Harriot]

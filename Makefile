@@ -11,3 +11,8 @@ build:
 
 serve:
 	simple-http-server -p 8000 dist/
+
+upload:
+	git add src/*
+	git commit -m $(msg)
+	git push

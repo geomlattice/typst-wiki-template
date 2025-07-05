@@ -39,6 +39,11 @@ make build && make serve
 #bash compile.sh
 #simple-http-server -p 8000 dist/
 ```
+
+When everything looks good
+```bash
+make upload msg='adding reading notes on Proclus Commentary on Euclid'
+```
 See the Appendix for more information of compilation, serving, and production hosting
 
 ### Editor Only Workflow
