@@ -5,22 +5,32 @@
 If you need rust
 ```bash
 make install_rust
+#curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs  | sh -s -- -y
+#. "$HOME/.cargo/env"
 ```
 
 If you need typst-cli and simple-http-server for local build testing:
 ```bash
 make install
+#cargo install --locked typst-cli	
+#cargo install simple-http-server
 ```
 
 After you've made edits in `src/*` that make sense, to view locally
 ```bash
 make build && make serve
+#bash compile.sh
+#simple-http-server -p 8000 dist/
 ```
+See the Appendix for more information of compilation, serving, and production hosting
 
-Or if you are bold, maybe just edit the files in `src/*` and rely on the build done in `~/.github/workflows/jekyll-gh-pages.yml`
+### Editor Only Workflow
 
+It is possible to only edit the files in `src/*` and rely on the build done in `~/.github/workflows/jekyll-gh-pages.yml` for ones repo to view the changes, if one does not have access to a development environment or cares not for such tools.
 
-Wiktionary is the source of most of this information.
+### Project Outline and Wiktionary Etymology
+
+`Wiktionary is the source of most of this information.`
 
 Weike `維客` is Chinese for wiki in the sense as it is used in English. `維` means to preserve; to maintain; to hold together; and dimension while `客` means customer; visitor; and guest. This is related ultimately to the word weiji `維基`, which is derived from Hawaiian wikiwiki, further with this being derivative of Proto-Eastern Polynesian witi which itself means fast, rapid, alert. Exactly this connocation of speed is where English was inspired to call an encyclopedia WikiWikiWeb: the web at its fastest. In the Great Tradition of the Citation Chain, we preserve that which allows us to accomplish ultimate speed. This is the great promise of the future we may bring to the codex and a Neo-Memex.  
 
@@ -71,7 +81,9 @@ for i in $COMPILE_TARGETS; do
 	elif [ $(echo $i | cut -d '/' -f 3) == "lib.typ" ]; then
 		echo "subdir level lib.typ should not be directly compiled"
 	else
+		#../concept/entry.typ -> concept
 		DIR=$(echo $i | cut -d '/' -f 2)
+		#../concept/entry.typ -> entry.typ -> entry
 		FILE=$(echo $i |cut -d '/' -f 3 | cut -d '.' -f 1)
 		PDF_FILEPATH="../dist/$DIR/$FILE.pdf"
 		echo $PDF_FILEPATH; 
@@ -79,6 +91,8 @@ for i in $COMPILE_TARGETS; do
 	fi
 done
 ```
+
+The yml is rather simple since the complexity is largely left to `compile.sh`
 
 ```yml
 on:
