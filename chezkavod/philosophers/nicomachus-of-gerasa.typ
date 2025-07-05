@@ -1,7 +1,17 @@
-= Nichomachus of Gerasa
-
+#set page(paper: "a5", fill: rgb("#262626"))
+#set text(fill: white, font: "DejaVu Sans Mono", size: 10pt)
 #set quote(block: true)
 #show link: set text(fill: blue)
+#set quote(block: true)
+
+#let title = align(center, text(17pt)[ *Nichomachus of Gerasa*])
+
+#grid(
+  columns: (auto, 1fr),
+  [#pad(y: 10pt, title)],
+  grid.hline(stroke: orange)
+)
+
 
 Nicomachus of Gerasa hailed from Roman Syria(now Jerash, Jordan), born in the year 60 CE. It must be recalled in the centuries after Plato there had come into fashion a tendency to herald Plato and Aristotle as not only harmonious and united in overall aim, but also to see them as merely refining the treasured insight of Pythagoras. So Nicomachus is remembered as a Pythagorean, and he wrote about the mystical nature of number and set about exploring a theory of music and harmony. In an Era where Arithmetic was philosophy, Nicomachus set the standard for later Neoplatonic schooling in the Late Antique World, and this central status led Boethius to paraphrase Nicomachus into Latin, preserving him as a standard in medieval schooling[^1]. With humor we may regard Boethius as having released a language model compression of the Philsopher of Arithmetic for Latin. 
 
