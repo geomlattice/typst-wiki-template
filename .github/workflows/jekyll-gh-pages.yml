@@ -42,7 +42,8 @@ jobs:
           cargo install --locked typst-cli
       - name: Transfer Font
         run: |
-          ls ./assets
+          mkdir -p ~/.local/share/fonts
+          cp ./assets/Book-Antiqua.ttf ~/.local/share/fonts
       - name: Build Book
         run: |
           bash compile.sh
