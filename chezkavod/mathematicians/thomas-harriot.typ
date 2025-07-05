@@ -1,5 +1,5 @@
 #set page(paper: "a5", fill: rgb("#262626"))
-#set text(fill: white,  size: 10pt)
+#set text(fill: white, font: "DejaVu Sans Mono",  size: 10pt)
 #set quote(block: true)
 #show link: set text(fill: blue)
 
