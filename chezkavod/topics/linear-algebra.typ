@@ -20,7 +20,7 @@
 
 The inner product of two vectors x, y in K with dimension n is defined to be
 
-$ x dot. op y= sum_(i=1)^n x_i y_i in K $
+$ x dot.op y= sum_(i=1)^n x_i y_i in K $
 
 Two vectors x,y $in$ $K^n$ are said to be orthogonal, denoted by x $perp$ y if their inner product equals zero [1](https://f005.backblazeb2.com/file/wwwmdf/Linear_Programing-9780387554174.pdf). 
 
