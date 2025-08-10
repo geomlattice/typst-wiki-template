@@ -20,6 +20,8 @@ Soon, a Search Engine will be implemented over the text files before compilation
 	=== Topics
 	- #link("topics/stirling-numbers.pdf")[Stirling Numbers]
 - #link("mathematicians/augustin-cauchy.pdf")[Augustin Cauchy]  
+  === Scholastic Reductions
+  - #link("scholastic/cauchy_creation_of_complex_function_theory-9780521068871.pdf")[Cauchy and the Creation of Complex Function Theory]
 
 == Philosophers
 - #link("philosophers/nicomachus-of-gerasa.pdf")[Nicomachus of Gerasa]
