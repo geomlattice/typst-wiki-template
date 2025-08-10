@@ -19,6 +19,7 @@ Soon, a Search Engine will be implemented over the text files before compilation
 	- #link("scholastic/harriot_magisteria_magna-9783037190593.pdf")[Magisteria Magna]
 	=== Topics
 	- #link("topics/stirling-numbers.pdf")[Stirling Numbers]
+- #link("mathematicians/augustin-cauchy.pdf")[Augustin Cauchy]  
 
 == Philosophers
 - #link("philosophers/nicomachus-of-gerasa.pdf")[Nicomachus of Gerasa]
