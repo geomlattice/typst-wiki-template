@@ -25,3 +25,7 @@ Soon, a Search Engine will be implemented over the text files before compilation
 
 == General Topics
 - #link("topics/linear-algebra.pdf")[Linear Algebra]
+- #link("topics/continued-fractions.pdf")[Continued Fractions]
+  === Scholastic Reductions
+  - #link("scholastic/continued_fractions-0201135108.pdf")[Continued Fractions: Analytic Theory and Applications]
+  - #link("scholastic/continued_fractions_and_chaos-10_1080-00029890_1992_11995835.typ")[Continued Fractions and Chaos]
