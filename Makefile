@@ -1,3 +1,9 @@
+compose:
+	sudo docker compose up
+
+dcompile:
+	sudo docker exec -it template-wiki-server-1 bash -c 'cd /var/www/ && bash compile.sh'
+
 install_rust:
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs  | sh -s -- -y
 	. "$HOME/.cargo/env"
@@ -16,3 +22,4 @@ upload:
 	git add src/*
 	git commit -m "$(msg)"
 	git push
+

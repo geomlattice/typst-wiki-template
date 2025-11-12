@@ -1,0 +1,11 @@
+services:
+    server:
+      build:
+        context: .
+      ports:
+        - 9996:8000
+      volumes:
+      - ./src/:/var/www/src
+
+volumes:
+  src:

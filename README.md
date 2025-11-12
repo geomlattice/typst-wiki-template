@@ -17,6 +17,19 @@ So far, the wiki looks like this
 
 This repo is subject to a lot of change at present.
 
+### Docker setup from source and container 
+
+```bash
+sudo docker compose build
+sudo docker run -i -v ./src/:/var/www/src -p 9996:8000 template-wiki-server
+```
+
+### Docker setup from compose
+```bash
+sudo docker compose up
+sudo docker exec -it template-wiki-server-1 bash -c 'cd /var/www/ && bash compile.sh'
+```
+
 ### Local Build Guide
 
 If you need rust
