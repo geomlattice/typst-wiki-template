@@ -9,8 +9,14 @@
     - [x] background color
     - [x] quotes
 - [x] cicd with tailwind and html
-- [ ] update li in scholastic reduction
+- [x] update li in scholastic reduction
 - [ ] highlight links blue, visited links purple
+
+- [ ] explore webassembly
+    - [ ] setup search bar
+    - [ ] setup REST/CGI triggers
+    - [ ] test pyterrier in webassembly
+        - [ ] rewrite pyterrier in typst/webassembly?
 
 - [ ] Explore Citations
 - [ ] Move Quote Structures to lib.typ/template.typ
