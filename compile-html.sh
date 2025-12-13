@@ -29,7 +29,7 @@ done
 #leave source; go back to root
 cd ..
 
-tailwindcss -i dist/philosophers/test_styles.css -o dist/philosophers/test_styles_out.css
-tailwindcss -i dist/mathematicians/test_styles.css -o dist/mathematicians/test_styles_out.css
-tailwindcss -i dist/topics/test_styles.css -o dist/topics/test_styles_out.css
-tailwindcss -i dist/scholastic/test_styles.css -o dist/scholastic/test_styles_out.css
+tailwindcss -i src/philosophers/test_styles.css -o dist/philosophers/test_styles_out.css
+tailwindcss -i src/mathematicians/test_styles.css -o dist/mathematicians/test_styles_out.css
+tailwindcss -i src/topics/test_styles.css -o dist/topics/test_styles_out.css
+tailwindcss -i src/scholastic/test_styles.css -o dist/scholastic/test_styles_out.css
