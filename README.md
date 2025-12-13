@@ -68,7 +68,7 @@ module.exports = {
 ```
 Next generate the output
 ```bash
-tailwindcss -i dist/topics/test_styles.css -o dist/topics/test_styles_out.css
+tailwindcss -i src/topics/test_styles.css -o dist/topics/test_styles_out.css
 ```
 
 Add to html after generation

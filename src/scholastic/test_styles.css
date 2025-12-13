@@ -12,3 +12,11 @@ body {
   @apply bg-[#262626]
   text-white
 }
+
+ul {
+  @apply list-disc
+}
+
+li {
+  @apply pb-4
+}
