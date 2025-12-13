@@ -1,4 +1,8 @@
-#import "lib.typ": wiki
+#import "lib.typ": wiki, bquotelink
+//#import "@preview/zebraw:0.6.1": *
+//#show: zebraw-init
+//#show: zebraw
+//#show math.equation: html.frame
 
 #show: wiki.with(
 	title:[
@@ -12,9 +16,15 @@ The inner product of two vectors x, y in K with dimension n is defined to be
 
 $ x dot.op y= sum_(i=1)^n x_i y_i in K $
 
-#quote(attribution: [#link("https://f005.backblazeb2.com/file/wwwmdf/Linear_Programing-9780387554174.pdf#page=14")[IBSN 9780387554174]])[
-  Two vectors x,y $in$ $K^n$ are said to be orthogonal, denoted by x $perp$ y if their inner product equals zero  
-]
+#bquotelink([#link("https://f005.backblazeb2.com/file/wwwmdf/Linear_Programing-9780387554174.pdf#page=14")[IBSN 9780387554174]], [
+  Two vectors $x,y in K^n$ are said to be orthogonal, denoted by $x perp y$ if their inner product equals zero  
+  //Two vectors x,y $in$ $K^n$ are said to be orthogonal, denoted by x $perp$ y if their inner product equals zero  
+])
+
+//#quote(attribution: [#link("https://f005.backblazeb2.com/file/wwwmdf/Linear_Programing-9780387554174.pdf#page=14")[IBSN 9780387554174]])[
+//  Two vectors $x,y in K^n$ are said to be orthogonal, denoted by $x perp y$ if their inner product equals zero  
+  //Two vectors x,y $in$ $K^n$ are said to be orthogonal, denoted by x $perp$ y if their inner product equals zero  
+//]
 
 ```typst
 	#let inner(a, b) = {

@@ -1,4 +1,4 @@
-#import "lib.typ": wiki
+#import "lib.typ": wiki, bquote
 
 #show: wiki.with(
 	title:[
@@ -10,27 +10,33 @@
 Nicomachus of Gerasa hailed from Roman Syria(now Jerash, Jordan), born in the year 60 CE. It must be recalled in the centuries after Plato there had come into fashion a tendency to herald Plato and Aristotle as not only harmonious and united in overall aim, but also to see them as merely refining the treasured insight of Pythagoras. So Nicomachus is remembered as a Pythagorean, and he wrote about the mystical nature of number and set about exploring a theory of music and harmony. In an Era where Arithmetic was philosophy, Nicomachus set the standard for later Neoplatonic schooling in the Late Antique World, and this central status led Boethius to paraphrase Nicomachus into Latin, preserving him as a standard in medieval schooling[^1]. With humor we may regard Boethius as having released a language model compression of the Philsopher of Arithmetic for Latin. 
 
 
-#quote(attribution: [wikipedia[1]])[
+#bquote("wikipedia[1]", [
 	Historians consider Nicomachus a Neopythagorean based on his tendency to view numbers as having mystical properties rather than their mathematical properties,^[3]^[4] citing an extensive amount of Pythagorean literature in his work, including works by Philolaus, Archytas, and Androcydes.^[1] He writes extensively on numbers, especially on the significance of prime numbers and perfect numbers and argues that arithmetic is ontologically prior to the other mathematical sciences (music, geometry, and astronomy), and is their cause. Nicomachus distinguishes between the wholly conceptual immaterial number, which he regards as the 'divine number', and the numbers which measure material things, the 'scientific' number.^[2] Nicomachus provided one of the earliest Greco-Roman multiplication tables; the oldest extant Greek multiplication table is found on a wax tablet dated to the 1st century AD (now found in the British Museum).^[5] 
-]
+])
 
-#quote(attribution: [wikipedia[1]])[
+//#quote(attribution: [wikipedia[1]])[
+//	Historians consider Nicomachus a Neopythagorean based on his tendency to view numbers as having mystical properties rather than their mathematical properties,^[3]^[4] citing an extensive amount of Pythagorean literature in his work, including works by Philolaus, Archytas, and Androcydes.^[1] He writes extensively on numbers, especially on the significance of prime numbers and perfect numbers and argues that arithmetic is ontologically prior to the other mathematical sciences (music, geometry, and astronomy), and is their cause. Nicomachus distinguishes between the wholly conceptual immaterial number, which he regards as the 'divine number', and the numbers which measure material things, the 'scientific' number.^[2] Nicomachus provided one of the earliest Greco-Roman multiplication tables; the oldest extant Greek multiplication table is found on a wax tablet dated to the 1st century AD (now found in the British Museum).^[5] 
+//]
+
+#bquote("wikipedia[1]", [
 	Although Nicomachus is considered a Pythagorean, John M. Dillon says that Nicomachus's philosophy "fits comfortably within the spectrum of contemporary Platonism."^[6] In his work on arithmetic, Nicomachus quotes from Plato's Timaeus^[7] to make a distinction between the intelligible world of Forms and the sensible world, however, he also makes more Pythagorean distinctions, such as between Odd and even numbers.^[6] Unlike many other Neopythagoreans, such as Moderatus of Gades, Nicomachus makes no attempt to distinguish between the Demiurge, who acts on the material world, and The One which serves as the supreme first principle.^[6] For Nicomachus, God as the supreme first principle is both the demiurge and the Intellect (nous), which Nicomachus also equates to being the monad, the potentiality from which all actualities are created.^[6]
-]
+])
 
-#quote(attribution: [wikipedia[1]])[
+#bquote("wikipedia[1]", [
 	Two of Nicomachus' works, the Introduction to Arithmetic and the Manual of Harmonics are extant in a complete form, and two others, a work on Theology of Arithmetic and a Life of Pythagoras survive in fragments, epitomes, and summaries by later authors.^[1] The Theology of Arithmetic (Ancient Greek Θεολογούμενα ἀριθμητικῆς), on the Pythagorean mystical properties of numbers in two books is mentioned by Photius. There is an extant work sometimes attributed to Iamblichus under this title written two centuries later which contains a great deal of material thought to have been copied or paraphrased from Nicomachus' work. Nicomachus's Life of Pythagoras was one of the main sources used by Porphyry and Iamblichus, for their (extant) Lives of Pythagoras.^[1] An Introduction to Geometry, referred to by Nicomachus himself in the Introduction to Arithmetic,^[8] has not survived.^[1] Among his known lost work is another larger work on music, promised by Nicomachus himself, and apparently^[citation needed] referred to by Eutocius in his comment on the sphere and cylinder of Archimedes.
-]
+])
 
-#quote(attribution: [wikipedia[1]])[
+#bquote("wikipedia[1]", [
 	The work of Boethius on arithmetic and music was a core part of the Quadrivium liberal arts and had a great diffusion during the Middle Ages.
-]
+])
 
 Nichomachus of Gerasa is the source of the sieve of Eratosthenes, which was used by Euler in his proof of the product for of the Zeta function.
 
-#quote(attribution: [wikipedia[2]])[
+#bquote("wikipedia[2]", [
 	The earliest known reference to the sieve (Ancient Greek: κόσκινον Ἐρατοσθένους, kóskinon Eratosthénous) is in Nicomachus of Gerasa's Introduction to Arithmetic,[3] an early 2nd cent. CE book which attributes it to Eratosthenes of Cyrene, a 3rd cent. BCE Greek mathematician, though describing the sieving by odd numbers instead of by primes.
-]
+])
+
+//end body
 ]
 
 #body <body>

@@ -46,6 +46,37 @@ make install
 #cargo install simple-http-server
 ```
 
+Tailwind css; more info on install [here](https://tailwindcss.com/blog/standalone-cli)
+
+```bash
+#tailwindcss init
+#add to css file
+#@import "tailwindcss";
+```
+
+Create `tailwind.config.js`
+
+```javascript
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./dist/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+Next generate the output
+```bash
+tailwindcss -i dist/topics/test_styles.css -o dist/topics/test_styles_out.css
+```
+
+Add to html after generation
+#TODO: generate within typst?
+```html
+<link rel="stylesheet" type="text/css" href="test_styles_out.css" />
+```
+
 After you've made edits in `src/*` that make sense, to view locally
 ```bash
 make build && make serve

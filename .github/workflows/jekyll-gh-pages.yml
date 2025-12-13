@@ -42,7 +42,7 @@ jobs:
           cargo install --locked typst-cli
       - name: Build Book
         run: |
-          bash compile.sh
+          bash compile-html.sh
       - name: Upload Typst Source Code
         run: |
           mkdir -p ./dist/src
