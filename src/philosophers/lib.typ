@@ -47,14 +47,18 @@
   }
 }
 
-#let bquote(attribution, rawtext) = context {
+#let bquote(attr, rawtext) = context {
   if target() == "html" {
-    html.elem("blockquote", attrs: (class: "p-4 my-4 border-s-4 border-default bg-neutral-secondary-soft", cite: attribution))[
+    html.elem("blockquote", attrs: (class: "p-4 my-4 border-s-4 border-default bg-neutral-secondary-soft"))[
       #rawtext
-      #html.elem("cite")[* #text("\n--" + attribution) *]
+      #html.elem("cite")[* #text("\n--" + attr) *]
     ]
 
   } else {
+    //test this
+    //quote(attribution: attr)[#rawtext] 
     
+    //otherwise?
+    //rawtext
   }
 }
