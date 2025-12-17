@@ -1,0 +1,9 @@
+services:
+    wasmbuilder:
+      build:
+        context: .
+      volumes:
+      - ./src/:/app/src
+
+volumes:
+  src:
