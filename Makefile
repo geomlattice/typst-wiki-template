@@ -13,6 +13,9 @@ install:
 	cargo install simple-http-server
 
 build:
+	bash compile-html.sh
+
+buildpdf:
 	bash compile.sh
 
 serve:

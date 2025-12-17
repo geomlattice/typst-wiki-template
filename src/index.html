@@ -11,8 +11,28 @@
       src="https://cdn.jsdelivr.net/npm/@myriaddreamin/typst.ts/dist/esm/contrib/all-in-one-lite.bundle.js"
       id="typst"
     ></script>
+
+    <link
+        rel="stylesheet"
+        href="https://pyscript.net/releases/2025.11.2/core.css"
+    />
+    <script
+        type="module"
+        src="https://pyscript.net/releases/2025.11.2/core.js"
+    ></script>
   </head>
   <body>
+    <py-config type="toml">
+      packages = ["requests"]
+    </py-config>
+   <script type="py">
+      #await micropip.install("requests")
+      import requests 
+      r = requests.get('https://raw.githubusercontent.com/geomlattice/typst-wiki-template/refs/heads/main/TODO.md')
+      print("Hello, world!")
+      print(r.text)
+   </script>
+
     <div id="content"></div>
     <script>
       const contentDiv = document.getElementById('content');

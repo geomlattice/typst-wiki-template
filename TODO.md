@@ -13,10 +13,17 @@
 - [ ] highlight links blue, visited links purple
 
 - [ ] explore webassembly
+    - [x] test python wasm in typst
+        - [x] try and fail
+        - [ ] write up
+        - [ ] explore again
+    - [x] setup pyscript
     - [ ] setup search bar
-    - [ ] setup REST/CGI triggers
+        - [ ] test tailwindcss on index
+        - [ ] setup REST/CGI triggers
+        - [ ] wire up pyterrier in container
     - [ ] test pyterrier in webassembly
-        - [ ] rewrite pyterrier in typst/webassembly?
+        - [_] rewrite pyterrier in typst/webassembly?
 
 - [ ] Explore Citations
 - [ ] Move Quote Structures to lib.typ/template.typ
