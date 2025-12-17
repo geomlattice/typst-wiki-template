@@ -22,17 +22,9 @@
     ></script>
   </head>
   <body>
-    <py-config type="toml">
-      packages = ["requests"]
-    </py-config>
-   <script type="py">
-      #await micropip.install("requests")
-      import requests 
-      r = requests.get('https://raw.githubusercontent.com/geomlattice/typst-wiki-template/refs/heads/main/TODO.md')
-      print("Hello, world!")
-      print(r.text)
-   </script>
-
+  
+   <!--https://docs.pyscript.net/2025.11.2/beginning-pyscript/-->
+    <script type="py" src="./main.py" config="./pyscript.json"></script>
     <div id="content"></div>
     <script>
       const contentDiv = document.getElementById('content');

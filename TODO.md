@@ -18,6 +18,10 @@
         - [ ] write up
         - [ ] explore again
     - [x] setup pyscript
+        - [ ] review documentation
+        1. https://docs.pyscript.net/2025.11.2/
+        - [ ] review examples
+        1. https://pyscript.com/@examples
     - [ ] setup search bar
         - [ ] test tailwindcss on index
         - [ ] setup REST/CGI triggers
@@ -32,5 +36,7 @@
 - [ ] Explore Data
 	- [ ] Explore Plotting and Visualization
 	1. https://github.com/cetz-package/cetz
+    - [ ] Explore matrices and vectors
+    1. https://typst.app/universe/package/numty/
 - [ ] Explore WebAssembly Plugins
 - [ ] Publish Template

@@ -4,6 +4,9 @@ mkdir -p dist/topics
 mkdir -p dist/scholastic
 
 cd src
+
+cp ./main.py ../dist && cp ./pyscript.json ../dist
+
 COMPILE_TARGETS=$(find . -name "*.typ") 
 
 for i in $COMPILE_TARGETS; do 
