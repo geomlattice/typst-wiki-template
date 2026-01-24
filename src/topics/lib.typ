@@ -58,3 +58,15 @@
     
   }
 }
+
+#let wikiplink(linkattribution, rawtext) = context {
+  if target() == "html" {
+    html.elem("blockquote", attrs: (class: "p-4 my-4 border-s-4 border-default bg-neutral-secondary-soft"))[
+      #rawtext
+      #html.elem("cite")[* #text("\n--" + linkattribution) *]
+    ]
+
+  } else {
+    
+  }
+}

@@ -13,6 +13,7 @@
 - [x] fix container to use tailwindcss
 
 - [ ] update tailwindcss
+    - [ ] add spacing between paragraphs
     - [ ] style headings
     - [ ] highlight links blue, visited links purple
 
