@@ -22,6 +22,9 @@ Soon, a Search Engine will be implemented over the text files before compilation
 - #link("mathematicians/augustin-cauchy.html")[Augustin Cauchy]  
   === Scholastic Reductions
   - #link("scholastic/cauchy_creation_of_complex_function_theory-9780521068871.html")[Cauchy and the Creation of Complex Function Theory]
+- Augustus De Morgan
+  === Topics
+  - #link("topics/logic.html")[Logic]
 
 == Philosophers
 - #link("philosophers/nicomachus-of-gerasa.html")[Nicomachus of Gerasa]

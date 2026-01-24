@@ -11,7 +11,10 @@
 - [x] cicd with tailwind and html
 - [x] update li in scholastic reduction
 - [x] fix container to use tailwindcss
-- [ ] highlight links blue, visited links purple
+
+- [ ] update tailwindcss
+    - [ ] style headings
+    - [ ] highlight links blue, visited links purple
 
 - [ ] explore webassembly
     - [x] test python wasm in typst
