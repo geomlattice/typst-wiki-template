@@ -10,6 +10,7 @@
     - [x] quotes
 - [x] cicd with tailwind and html
 - [x] update li in scholastic reduction
+- [x] fix container to use tailwindcss
 - [ ] highlight links blue, visited links purple
 
 - [ ] explore webassembly
@@ -23,9 +24,12 @@
         - [ ] review examples
         1. https://pyscript.com/@examples
     - [ ] setup search bar
+        - [x] build and test search bar
+        - [x] wire up pyterrier in container
+        - [ ] create new index page with search bar
         - [ ] test tailwindcss on index
-        - [ ] setup REST/CGI triggers
-        - [ ] wire up pyterrier in container
+        - [ ] setup REST API 
+        - [ ] CGI triggers
     - [ ] test pyterrier in webassembly
         - [_] rewrite pyterrier in typst/webassembly?
 
