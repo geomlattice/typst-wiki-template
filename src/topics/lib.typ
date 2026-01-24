@@ -70,3 +70,16 @@
     
   }
 }
+
+#let wikiheading(headingtext) = context {
+  if target() == "html" {
+    html.elem("h4", attrs: (class: "text-2xl font-bold text-blue-600 !my-4"))[
+      #headingtext
+    ]
+
+  } else {
+    //TODO: test if pdf works with this?
+    heading(headingtext) 
+  }
+}
+

@@ -13,8 +13,8 @@
 - [x] fix container to use tailwindcss
 
 - [ ] update tailwindcss
-    - [ ] add spacing between paragraphs
-    - [ ] style headings
+    - [x] add spacing between paragraphs
+    - [x] style headings
     - [ ] highlight links blue, visited links purple
 
 - [ ] explore webassembly

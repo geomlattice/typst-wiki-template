@@ -3,6 +3,9 @@
 /* @tailwind components; */
 /* @tailwind utilities; */
 
+/*@layer theme, base, components, utilities;*/
+/*@layer theme, base, components, utilities;*/
+
 .wiki-title {
   background: #4D83F7
 }
@@ -11,4 +14,12 @@ body {
   /* @apply bg-slate-200 */
   @apply bg-[#262626]
   text-white
+}
+
+p {
+  @apply mb-4
+}
+
+a {
+   @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600
 }

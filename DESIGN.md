@@ -8,6 +8,8 @@
 * tailwindcss in `lib.typ` files
 * tailwindcss should never be in wiki file directly
     * only imported functions should expose tailwindcss to wiki
+* tailwindcss also in `test_styles.css`
+    * whole document level `@apply` goes here
 
 ### Links
 

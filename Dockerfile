@@ -9,5 +9,6 @@ RUN chmod +x /usr/local/bin/tailwindcss
 RUN mkdir -p /var/www/dist
 ADD compile.sh /var/www/
 ADD compile-html.sh /var/www/
+ADD tailwind.config.js /var/www/ 
 
 CMD	["simple-http-server", "-p", "8000", "/var/www/dist/"]
