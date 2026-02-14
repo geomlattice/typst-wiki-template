@@ -55,7 +55,9 @@
     ]
 
   } else {
-    
+    quote(attribution: [#linkattribution])[
+      #rawtext
+    ]    
   }
 }
 
@@ -67,6 +69,9 @@
     ]
 
   } else {
+    quote(attribution: [#linkattribution])[
+      #rawtext
+    ]    
     
   }
 }
@@ -79,6 +84,7 @@
 
   } else {
     //TODO: test if pdf works with this?
+    //Seems like it does
     heading(headingtext) 
   }
 }
