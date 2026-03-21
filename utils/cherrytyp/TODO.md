@@ -2,6 +2,9 @@
 
 - [x] test basic subprocess command
 - [x] test rest with curl
+- [ ] continue reviewing resources
+    - [ ] review `https://www.tutorialspoint.com/cherrypy/index.htm`
+- [ ] change port
 - [ ] implement sessions
     * try `https://docs.cherrypy.dev/en/stable/_modules/cherrypy/test/sessiondemo.html`
     * try `https://webscraping.ai/faq/curl/how-do-i-use-curl-to-handle-sessions`
