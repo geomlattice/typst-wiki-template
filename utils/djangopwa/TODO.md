@@ -7,7 +7,10 @@
     cd viewtyp
     uv init
     uv add django
+    uv run manage.py startapp cards
+    #add "cards" to INSTALLED_APPS in `viewtyp/settings.py`
     uv run manage.py collectstatic
+    uv run manage.py migrate
     uv run manage.py runserver 0.0.0.0:5554
     ```
 - [ ] PWA Functionality and Ease of Use
@@ -21,13 +24,16 @@
         #create thumbnail images with PIL python
         ```
         - [ ] create thumbnail images
-            - [ ] review guide video
+            - [x] review guide video
                 * cf `https://youtu.be/lteaqUZWk3E`
                 * cf `https://github.com/Yalchin403/youtube/tree/master/projects/pwa_demo`
                 * test example code via `$BROWSER http://$IP_ADDR:$PORT/products` 
                 - [x] test example code
-            - [ ] copy over icons from here `https://github.com/Yalchin403/youtube/tree/master/projects/pwa_demo`
-            - [ ] review static files from above
+            - [x] copy over icons from here `https://github.com/Yalchin403/youtube/tree/master/projects/pwa_demo`
+            - [x] review static files from above
+            - [x] review django framework `https://youtu.be/nGIg40xs9e4`
+            - [x] get `serviceworker.js` to serve
+            - [ ] get `manifest.json` to serve
         ```bash
         #add `url('', include('pwa.urls')),` to urlpatterns in `urls.py`  
         #inject {% load pwa %} at top of html

@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-874xu5(moh^xti*t%4b4pf+^%#=)73iawci@6p+9^*)su5zv80
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["10.0.0.107"]
+ALLOWED_HOSTS = ["10.0.0.107", "127.0.0.1"]
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "cards",
     "pwa"
 ]
 
@@ -117,9 +118,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = "static/"
-
+STATIC_ROOT = BASE_DIR / "static"
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'viewtyp/static'),
 ]
 
 
@@ -132,38 +133,36 @@ PWA_APP_SCOPE = '/'
 PWA_APP_ORIENTATION = 'any'
 PWA_APP_START_URL = '/'
 PWA_APP_STATUS_BAR_COLOR = 'default'
+
 PWA_APP_ICONS = [
-    {
-        'src': '/static/images/my_app_icon.png',
-        'sizes': '160x160'
-    }
+    {"src": "/static/pwa/icons/icon-144.png", "sizes": "144x144"},
+    {"src": "/static/pwa/icons/icon-192.png", "sizes": "192x192"},
+    {"src": "/static/pwa/icons/icon-512.png", "sizes": "512x512"},
 ]
 PWA_APP_ICONS_APPLE = [
-    {
-        'src': '/static/images/my_apple_icon.png',
-        'sizes': '160x160'
-    }
+    {"src": "/static/pwa/icons/icon-144.png", "sizes": "144x144"},
 ]
 PWA_APP_SPLASH_SCREEN = [
-    {
-        'src': '/static/images/icons/splash-640x1136.png',
-        'media': '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)'
-    }
+        # {
+        #    'src': '/static/images/icons/splash-640x1136.png',
+        #    'media': '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)'
+        #}
 ]
 PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'en-US'
 PWA_APP_SHORTCUTS = [
-    {
-        'name': 'Shortcut',
-        'url': '/target',
-        'description': 'Shortcut to a page in my application'
-    }
+        #{
+        #    'name': 'Shortcut',
+        #    'url': '/target',
+        #    'description': 'Shortcut to a page in my application'
+        #}
 ]
 PWA_APP_SCREENSHOTS = [
-    {
-      'src': '/static/images/icons/splash-750x1334.png',
-      'sizes': '750x1334',
-      "type": "image/png"
-    }
+    #{
+        #  'src': '/static/images/icons/splash-750x1334.png',
+      #  'sizes': '750x1334',
+      #   "type": "image/png"
+      # }
 ]
 
+PWA_DEBUG_MODE = DEBUG
