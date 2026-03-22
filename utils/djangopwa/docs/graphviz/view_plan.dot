@@ -1,0 +1,15 @@
+digraph {
+  rankdir="LR";
+  bgcolor="transparent"
+  node [style=filled, shape=box, fontsize=10, fillcolor=darkorchid4, fontcolor=white, fontname=Helvetica]
+  edge [color=white, arrowhead=open]
+
+  a [label=login]
+  b [label=dashboard]
+  c [label="view files"]
+  d [label="file display"]
+  
+  a -> b 
+  b -> c
+  c -> d
+}

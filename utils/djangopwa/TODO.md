@@ -33,15 +33,13 @@
             - [x] review static files from above
             - [x] review django framework `https://youtu.be/nGIg40xs9e4`
             - [x] get `serviceworker.js` to serve
-            - [ ] get `manifest.json` to serve
+            - [x] get `manifest.json` to serve
         ```bash
         #add `url('', include('pwa.urls')),` to urlpatterns in `urls.py`  
         #inject {% load pwa %} at top of html
         #inject  {% progressive_web_app_meta %} in html <head>
         ```
-            - [ ] generate new icons etc with PIL
-            * `/static/images/my_app_icon.png`
-            * `static/images/my_apple_icon.png`
+            - [ ] generate new icons etc with imagemagick
             - [ ] `160x160`
             * `/images/icons/icon-${VALUE}.png`
             - [ ] `72x72`
@@ -62,8 +60,11 @@
             - [ ] `1668x2224`
             - [ ] `1668x2388`
             - [ ] `2048x2732`
+
     - [ ] pwa install button gallery
         * cf `https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/How_to/Trigger_install_prompt`
+    - [ ] Explore PWABuilder for iOS and Android App stores
+        * cf `https://www.pwabuilder.com/`
     - [ ] TLS/SSL for non-localhost install of pwa
         * `tmole https` works
         * try `caddy`
@@ -73,3 +74,5 @@
         - [ ] Where do hyperlinks go
 - [ ] User Interaction
     - [ ] Write notes to db then typst
+- [x] Qutebrowser test
+    * cf `https://github.com/qutebrowser/qutebrowser/issues/8288#issuecomment-2310682936`

@@ -1,0 +1,19 @@
+digraph {
+  rankdir="LR";
+  bgcolor="transparent"
+  node [style=filled, shape=box, fontsize=10, fillcolor=darkorchid4, fontcolor=white, fontname=Helvetica]
+  edge [color=white, arrowhead=open]
+
+  a [label="initial request"]
+  b [label="django server"]
+  /* c [label="login screen"]
+  d [label="username"]
+  e [label="password"] */
+  f [label="filedata JSON"]
+  
+  a -> b
+  /* b -> c
+  c -> d [dir="back"]
+  c -> e [dir="back"] */
+  b -> f
+}
