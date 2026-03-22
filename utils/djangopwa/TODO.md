@@ -14,7 +14,7 @@
     uv run manage.py runserver 0.0.0.0:5554
     ```
 - [ ] PWA Functionality and Ease of Use
-    - [ ] setup pwa
+    - [x] setup pwa
         * cf `https://github.com/silviolleite/django-pwa`
         ```bash
         uv add django-pwa
@@ -64,6 +64,9 @@
             - [ ] `2048x2732`
     - [ ] pwa install button gallery
         * cf `https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/How_to/Trigger_install_prompt`
+    - [ ] TLS/SSL for non-localhost install of pwa
+        * `tmole https` works
+        * try `caddy`
 - [ ] Content
     - [ ] iframe for typ html
         * cf `https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe`
