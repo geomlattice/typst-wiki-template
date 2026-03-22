@@ -17,6 +17,15 @@
     - [x] style headings
     - [ ] highlight links blue, visited links purple
 
+- [ ] Django Model View Viewmodel
+    - [ ] Model
+        - [x] hand annotate `sitemap.xml`
+    - [ ] Viewmodel
+        - [ ] process page info
+            * build upon `curl https://geomlattice.github.io/typst-wiki-template/sitemap.xml | xq -j`
+    - [ ] View
+        - [ ] display pages in table
+
 - [ ] explore webassembly
     - [x] test python wasm in typst
         - [x] try and fail
@@ -27,7 +36,6 @@
         1. https://docs.pyscript.net/2025.11.2/
         - [ ] review examples
         1. https://pyscript.com/@examples
-    - [x] create `sitemap.xml`
     - [ ] setup search bar
         - [x] build and test search bar
         - [x] wire up pyterrier in container
