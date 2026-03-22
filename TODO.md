@@ -27,6 +27,7 @@
         1. https://docs.pyscript.net/2025.11.2/
         - [ ] review examples
         1. https://pyscript.com/@examples
+    - [x] create `sitemap.xml`
     - [ ] setup search bar
         - [x] build and test search bar
         - [x] wire up pyterrier in container
@@ -48,3 +49,4 @@
     1. https://typst.app/universe/package/numty/
 - [ ] Explore WebAssembly Plugins
 - [ ] Publish Template
+
