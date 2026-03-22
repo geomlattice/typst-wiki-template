@@ -90,4 +90,161 @@ uv run manage.py test $APP
 
 > Just like templates, we might be able to get away with putting our static files directly in polls/static (rather than creating another polls subdirectory), but it would actually be a bad idea. Django will choose the first static file it finds whose name matches, and if you had a static file with the same name in a different application, Django would be unable to distinguish between them. We need to be able to point Django at the right one, and the best way to ensure this is by namespacing them. That is, by putting those static files inside another directory named for the application itself. Put the following code in that stylesheet (polls/static/polls/style.css):
 
+### API/Built-in Template Tags and Filters
 
+> The include tag should be considered as an implementation of “render this subtemplate and include the HTML”, not as “parse this subtemplate and include its contents as if it were part of the parent”. This means that there is no shared state between included templates – each include is a completely independent rendering process.
+
+- TODO: use regroup on shared categories of elements
+
+```python
+cities = [
+    {"name": "Mumbai", "population": "19,000,000", "country": "India"},
+    {"name": "Calcutta", "population": "15,000,000", "country": "India"},
+    {"name": "New York", "population": "20,000,000", "country": "USA"},
+    {"name": "Chicago", "population": "7,000,000", "country": "USA"},
+    {"name": "Tokyo", "population": "33,000,000", "country": "Japan"},
+]
+
+{% regroup cities by country as country_list %}
+
+<ul>
+{% for country in country_list %}
+    <li>{{ country.grouper }}
+    <ul>
+        {% for city in country.list %}
+          <li>{{ city.name }}: {{ city.population }}</li>
+        {% endfor %}
+    </ul>
+    </li>
+{% endfor %}
+</ul>
+```
+
+> Note that `{% regroup %}` does not order its input! Our example relies on the fact that the cities list was ordered by country in the first plac
+
+> suppose you have a view, app_views.client, whose URLconf takes a client ID (here, client() is a method inside the views file app_views.py). The URLconf line might look like this:
+
+```python
+path("client/<int:id>/", app_views.client, name="app-views-client")
+```
+
+> If this app’s URLconf is included into the project’s URLconf under a path such as this:
+
+```python
+path("clients/", include("project_name.app_name.urls"))
+```
+
+> …then, in a template, you can create a link to this view like this:
+
+```python
+{% url 'app-views-client' client.id %}
+```
+
+The template tag will output the string `/clients/client/123/`.
+
+Note that if the URL you’re reversing doesn’t exist, you’ll get an NoReverseMatch exception raised, which will cause your site to display an error page.
+
+If you’d like to retrieve a URL without displaying it, you can use a slightly different call:
+
+```python
+{% url 'some-url-name' arg arg2 as the_url %}
+
+<a href="{{ the_url }}">I'm linking to {{ the_url }}</a>
+```
+
+- Note: `dictsort` and `dictsortreversed` filters exist
+
+- Note: `random` filter exists
+
+- Note: `slugify` filter exists
+
+- Note `unorderedlist` filter exists
+
+> Recursively takes a self-nested list and returns an HTML unordered list – WITHOUT opening and closing <ul> tags.
+
+> The list is assumed to be in the proper format. For example, if var contains ['States', ['Kansas', ['Lawrence', 'Topeka'], 'Illinois']], then {{ var|unordered_list }} would return:
+
+```html
+<li>States
+<ul>
+        <li>Kansas
+        <ul>
+                <li>Lawrence</li>
+                <li>Topeka</li>
+        </ul>
+        </li>
+        <li>Illinois</li>
+</ul>
+</li>
+```
+
+- Note: `urlencode` filter exists
+
+### Cross Site Request Forgery protection
+
+> The first defense against CSRF attacks is to ensure that GET requests (and other ‘safe’ methods, as defined by RFC 9110 Section 9.2.1) are side effect free. 
+
+> If the CSRF_COOKIE_DOMAIN setting is set, the referer is compared against it. You can allow cross-subdomain requests by including a leading dot. For example, CSRF_COOKIE_DOMAIN = '.example.com' will allow POST requests from www.example.com and api.example.com. If the setting is not set, then the referer must match the HTTP Host header.
+
+> The CSRF protection cannot protect against man-in-the-middle attacks, so use HTTPS with HTTP Strict Transport Security. It also assumes validation of the HOST header and that there aren’t any cross-site scripting vulnerabilities on your site (because XSS vulnerabilities already let an attacker do anything a CSRF vulnerability allows and much worse).
+
+> Subdomains within a site will be able to set cookies on the client for the whole domain. By setting the cookie and using a corresponding token, subdomains will be able to circumvent the CSRF protection. The only way to avoid this is to ensure that subdomains are controlled by trusted users (or, are at least unable to set cookies). Note that even without CSRF, there are other vulnerabilities, such as session fixation, that make giving subdomains to untrusted parties a bad idea, and these vulnerabilities cannot easily be fixed with current browsers.
+
+### Database Functions
+
+- Note: `JSONArray` exists
+
+### Django admin and manage.py
+
+> django-admin is Django’s command-line utility for administrative tasks. This document outlines all it can do.
+
+> In addition, manage.py is automatically created in each Django project. It does the same thing as django-admin but also sets the DJANGO_SETTINGS_MODULE environment variable so that it points to your project’s settings.py file.
+
+### Generic Dataviews
+
+- TODO: Use `ArchiveIndexView`
+
+### The Django template language
+
+> If you have a background in programming, or if you’re used to languages which mix programming code directly into HTML, you’ll want to bear in mind that the Django template system is not simply Python embedded into HTML. This is by design: the template system is meant to express presentation, not program logic.
+
+> Why use a text-based template instead of an XML-based one (like Zope’s TAL)? We wanted Django’s template language to be usable for more than just XML/HTML templates. You can use the template language for any text-based format such as emails, JavaScript and CSV.
+
+### Sitemaps
+
+> To install the sitemap app, follow these steps:
+
+> Add 'django.contrib.sitemaps' to your INSTALLED_APPS setting.
+> Make sure your TEMPLATES setting contains a DjangoTemplates backend whose APP_DIRS options is set to True. It’s in there by default, so you’ll only need to change this if you’ve changed that setting.
+> Make sure you’ve installed the sites framework.
+
+After setup steps
+
+```python
+from django.contrib.sitemaps.views import sitemap
+
+path(
+    "sitemap.xml",
+    sitemap,
+    {"sitemaps": sitemaps},
+    name="django.contrib.sitemaps.views.sitemap",
+)
+```
+
+> Let’s assume you have a blog system, with an Entry model, and you want your sitemap to include all the links to your individual blog entries. Here’s how your sitemap class might look:
+
+```python
+from django.contrib.sitemaps import Sitemap
+from blog.models import Entry
+
+
+class BlogSitemap(Sitemap):
+    changefreq = "never"
+    priority = 0.5
+
+    def items(self):
+        return Entry.objects.filter(is_draft=False)
+
+    def lastmod(self, obj):
+        return obj.pub_date
+```
