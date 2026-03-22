@@ -57,7 +57,7 @@ ROOT_URLCONF = "viewtyp.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": ["viewtyp/templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
