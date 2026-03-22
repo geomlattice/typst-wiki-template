@@ -24,4 +24,8 @@ The current view model is tasked with simply getting the available files from th
 
 ![Viewmodel Graphviz](graphviz/viewmodel_plan.svg)
 
+### References and Blockquotes
 
+> The ViewModel pattern introduces a new layer—a simple Python class—that sits between your view and your template. Its only job is to gather and prepare all the data the template will need. The view just has to create an instance of this ViewModel and pass that single object to the template.
+
+[Django View Model](https://joshkaramuth.com/blog/django-view-model/)

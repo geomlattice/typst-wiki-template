@@ -1,5 +1,7 @@
 # utils/djangopwatest
 
+- [ ] Read Django Docs
+    * cf `https://browse.library.kiwix.org/viewer#devdocs_en_django_2026-01/index`
 - [x] generate template
     ```bash
     uv tool install django
@@ -68,7 +70,11 @@
     - [ ] TLS/SSL for non-localhost install of pwa
         * `tmole https` works
         * try `caddy`
-- [ ] Content
+- [ ] Processes in Viewmodel
+    * review `https://joshkaramuth.com/blog/django-view-model/`
+    - [ ] request `sitemap.xml` then convert to json
+    - [ ] pass json onto view and structure as content
+- [ ] Content in View
     - [ ] iframe for typ html
         * cf `https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe`
         - [ ] Where do hyperlinks go
