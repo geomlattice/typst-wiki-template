@@ -1,2 +1,3 @@
 dist/*
 *.wasm
+utils/djangopwa/docs/djgangodocs/zim/*
