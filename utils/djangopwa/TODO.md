@@ -1,7 +1,10 @@
 # utils/djangopwatest
 
-- [ ] Read Django Docs
+- [x] Read Django Docs
     * cf `https://browse.library.kiwix.org/viewer#devdocs_en_django_2026-01/index`
+    - [ ] Guide: How-tos
+    - [x] Guide: Intro
+    - [x] API
 - [x] generate template
     ```bash
     uv tool install django
@@ -15,6 +18,7 @@
     uv run manage.py migrate
     uv run manage.py runserver 0.0.0.0:5554
     ```
+
 - [ ] PWA Functionality and Ease of Use
     - [x] setup pwa
         * cf `https://github.com/silviolleite/django-pwa`
@@ -70,15 +74,78 @@
     - [ ] TLS/SSL for non-localhost install of pwa
         * `tmole https` works
         * try `caddy`
+
 - [ ] Processes in Viewmodel
     * review `https://joshkaramuth.com/blog/django-view-model/`
-    - [ ] request `sitemap.xml` then convert to json
-    - [ ] pass json onto view and structure as content
-- [ ] Content in View
-    - [ ] iframe for typ html
-        * cf `https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe`
-        - [ ] Where do hyperlinks go
+    - [x] create new data models
+        * `uv run manage.py makemigrations cards`
+        * `uv run manage.py migrate`
+    - [x] setup viewmodel
+    - [x] create pages
+        - [x] empty template with no params passed in
+        - [x] dump raw json into template
+        - [ ] create list and iterate in template
+            * example code: `djangodocs/intro/tutorial03`
+            * for `polls/templates/polls/index.html`
+            ```html
+            {% if latest_question_list %}
+                <ul>
+                {% for question in latest_question_list %}
+                    <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>No polls are available.</p>
+            {% endif %}
+            ```
+            * for `polls/views.py` 
+            ```python
+            from django.http import HttpResponse
+            from django.template import loader
+            from .models import Question
+
+            def index(request):
+                latest_question_list = Question.objects.order_by("-pub_date")[:5]
+                template = loader.get_template("polls/index.html")
+                context = {"latest_question_list": latest_question_list}
+                return HttpResponse(template.render(context, request))
+            ```
+            * attempt:
+            ```html
+            {% if view_model.indexlist %}
+            <ul>
+              {% for wikiarticle in view_model.indexlist %}
+                <li> {{ wikiarticle.loc }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+            ```
+        - [x] hyperlinks as direct page
+
+    - [ ] build index for homepage
+        - [x] request `sitemap.xml` then convert to json
+            - [x] draft request (viewmodel<-model)
+                * `$PWA_PREFIX/cards/view_models.py`
+            - [x] convert xml to json (viewmodel)
+            - [x] return json xml (viewmodel->view)
+            - [x] display raw json (view)
+            - [x] alter html template for wiki article
+                - [ ] style etc
+            - [x] move json parsing to viewmodel
+                - [ ] generate models with json entries 
+    - [ ] feed data into pages
+    - [x] redirect to typst article wiki page
+
+    - [ ] redirect to djangopwa article wiki page
+        - [ ] Content in View
+            - [ ] iframe for typ html
+                * cf `https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe`
+
 - [ ] User Interaction
     - [ ] Write notes to db then typst
+
 - [x] Qutebrowser test
     * cf `https://github.com/qutebrowser/qutebrowser/issues/8288#issuecomment-2310682936`
+
+- [ ] Setup logs
+    * cf `https://stackoverflow.com/questions/3182298/where-do-things-go-when-i-print-them-from-my-django-app`

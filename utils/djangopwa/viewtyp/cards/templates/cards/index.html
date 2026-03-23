@@ -2,4 +2,13 @@
 {% block title %}Cards Django App{% endblock title %}
 {% block content %}
 <p>Hello Again World</p>
+{% if view_model.indexlist %}
+<ul>
+  {% for wikiarticle in view_model.indexlist %}
+  <li> <a href="{{ wikiarticle.loc }}"> {{ wikiarticle.category }} {{ wikiarticle.wikititle}}</li></a>
+  {% endfor %}
+</ul>
+{% endif %}
+
+<!--<p>{{ view_model.jsonindex }}</p>-->
 {% endblock content %}
