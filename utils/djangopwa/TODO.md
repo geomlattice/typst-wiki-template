@@ -5,6 +5,14 @@
     - [ ] Guide: How-tos
     - [x] Guide: Intro
     - [x] API
+
+- [ ] User Interaction
+    - [ ] Write notes to db then typst
+        - [ ] djangomodel -> sqlite3 -> typst
+
+- [ ] Setup logs
+    * cf `https://stackoverflow.com/questions/3182298/where-do-things-go-when-i-print-them-from-my-django-app`
+
 - [x] generate template
     ```bash
     uv tool install django
@@ -19,7 +27,15 @@
     uv run manage.py runserver 0.0.0.0:5554
     ```
 
-- [ ] PWA Functionality and Ease of Use
+- [x] PWA Functionality and Ease of Use
+    - [ ] pwa install button gallery
+        * cf `https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/How_to/Trigger_install_prompt`
+    - [ ] Explore PWABuilder for iOS and Android App stores
+        * cf `https://www.pwabuilder.com/`
+    - [ ] TLS/SSL for non-localhost install of pwa
+        * `tmole https` works
+        * try `caddy`
+
     - [x] setup pwa
         * cf `https://github.com/silviolleite/django-pwa`
         ```bash
@@ -67,15 +83,8 @@
             - [ ] `1668x2388`
             - [ ] `2048x2732`
 
-    - [ ] pwa install button gallery
-        * cf `https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/How_to/Trigger_install_prompt`
-    - [ ] Explore PWABuilder for iOS and Android App stores
-        * cf `https://www.pwabuilder.com/`
-    - [ ] TLS/SSL for non-localhost install of pwa
-        * `tmole https` works
-        * try `caddy`
 
-- [ ] Processes in Viewmodel
+- [x] Processes in Viewmodel
     * review `https://joshkaramuth.com/blog/django-view-model/`
     - [x] create new data models
         * `uv run manage.py makemigrations cards`
@@ -122,7 +131,7 @@
             ```
         - [x] hyperlinks as direct page
 
-    - [ ] build index for homepage
+    - [x] build index for homepage
         - [x] request `sitemap.xml` then convert to json
             - [x] draft request (viewmodel<-model)
                 * `$PWA_PREFIX/cards/view_models.py`
@@ -137,7 +146,7 @@
                 ```python
                 Author.objects.create(age=25, name="Margaret Smith")
                 ```
-    - [ ] feed data into pages
+    - [x] feed data into pages
         * see `djangodocs/intro/tutorial03`
         ```python
         from django.shortcuts import get_object_or_404, render
@@ -155,18 +164,14 @@
             * `DELETE FROM cards_article WHERE id = 33;`
 
     - [x] redirect to djangopwa article wiki page
-        - [ ] Content in View
+        - [x] Content in View
             - [x] update model to have category
                 * migrate db
-            - [ ] iframe for typ html
+            - [x] iframe for typ html
                 * cf `https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe`
+            - [x] redirect from index to iframe display page
 
-- [ ] User Interaction
-    - [ ] Write notes to db then typst
-        - [ ] djangomodel -> sqlite3 -> typst
 
 - [x] Qutebrowser test
     * cf `https://github.com/qutebrowser/qutebrowser/issues/8288#issuecomment-2310682936`
 
-- [ ] Setup logs
-    * cf `https://stackoverflow.com/questions/3182298/where-do-things-go-when-i-print-them-from-my-django-app`

@@ -5,7 +5,7 @@
 {% if view_model.indexlist %}
 <ul>
   {% for wikiarticle in view_model.indexlist %}
-  <li> <a href="{{ wikiarticle.loc }}"> {{ wikiarticle.category }} {{ wikiarticle.wikititle}}</li></a>
+  <li> <a href="{{ wikiarticle.wikititle }}"> {{ wikiarticle.category }} {{ wikiarticle.wikititle}}</li></a>
   {% endfor %}
 </ul>
 {% endif %}

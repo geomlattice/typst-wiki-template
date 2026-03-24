@@ -5,4 +5,7 @@
 <p>{{ view_model.article_title }}</p>
 <p>{{ view_model.article_lastmod }}</p>
 <p>{{ view_model.article_category }}</p>
+<div className="flex flex-col h-dvh">
+<iframe width="100%" height="1000em" className="w-full" src="https://geomlattice.github.io/typst-wiki-template/{{ view_model.article_category}}/{{ view_model.article_title }}.html"></iframe>
+</div>
 {% endblock content %}
