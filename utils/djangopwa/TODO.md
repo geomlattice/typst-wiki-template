@@ -156,12 +156,14 @@
 
     - [x] redirect to djangopwa article wiki page
         - [ ] Content in View
-            - [ ] update model to have category
+            - [x] update model to have category
+                * migrate db
             - [ ] iframe for typ html
                 * cf `https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe`
 
 - [ ] User Interaction
     - [ ] Write notes to db then typst
+        - [ ] djangomodel -> sqlite3 -> typst
 
 - [x] Qutebrowser test
     * cf `https://github.com/qutebrowser/qutebrowser/issues/8288#issuecomment-2310682936`

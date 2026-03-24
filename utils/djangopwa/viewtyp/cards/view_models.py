@@ -10,6 +10,7 @@ class ArticleDetailViewModel:
     def __init__(self, article_title: str):
         self._article = self._get_article(article_title) 
         self._lastmod = self._get_lastmod()
+        self._category = self._get_category()
 
     def _get_article(self, article_title):
         try:
@@ -21,6 +22,11 @@ class ArticleDetailViewModel:
         if self._article:
             return self._article.lastmod
         return "sqrt(-1)"
+    
+    def _get_category(self):
+        if self._article:
+            return self._article.category
+        return "sqrt(-1)"
 
     @property 
     def article_title(self) -> str:
@@ -29,6 +35,10 @@ class ArticleDetailViewModel:
     @property
     def article_lastmod(self) -> str:
         return self._article.lastmod if self._article else "NOT MODDED"
+
+    @property
+    def article_category(self) -> str:
+        return self._article.category if self._article else "NO CATEGORY"
 
 class IndexGenerator:
     def __init__(self):
@@ -74,7 +84,8 @@ class IndexGenerator:
                     #TODO: of data deletion or data overload?
 
             #Commenting out now that these are in the db and the data will not change during testing
-            #Article.objects.create(article_title=wikititle, lastmod=data_before["lastmod"])
+            #TODO: understand why duplicates are created here
+            #Article.objects.create(article_title=wikititle, lastmod=data_before["lastmod"], category=link_category)
             return data_before
 
         processed_data = [preprocess(i) for i in full_list]
