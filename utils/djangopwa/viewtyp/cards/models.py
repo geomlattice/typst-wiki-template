@@ -4,4 +4,4 @@ from django.db import models
 
 class Article(models.Model):
     article_title = models.CharField(max_length=200)
-    lastmod = models.DateTimeField()
+    lastmod = models.CharField(max_length=200)

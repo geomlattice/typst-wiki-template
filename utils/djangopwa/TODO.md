@@ -84,7 +84,7 @@
     - [x] create pages
         - [x] empty template with no params passed in
         - [x] dump raw json into template
-        - [ ] create list and iterate in template
+        - [x] create list and iterate in template
             * example code: `djangodocs/intro/tutorial03`
             * for `polls/templates/polls/index.html`
             ```html
@@ -132,12 +132,31 @@
             - [x] alter html template for wiki article
                 - [ ] style etc
             - [x] move json parsing to viewmodel
-                - [ ] generate models with json entries 
+                - [x] generate models with json entries 
+                * see `djangodocs/ref/models/database-functions`
+                ```python
+                Author.objects.create(age=25, name="Margaret Smith")
+                ```
     - [ ] feed data into pages
-    - [x] redirect to typst article wiki page
+        * see `djangodocs/intro/tutorial03`
+        ```python
+        from django.shortcuts import get_object_or_404, render
+        from .models import Question
 
-    - [ ] redirect to djangopwa article wiki page
+        def detail(request, question_id):
+            question = get_object_or_404(Question, pk=question_id)
+            return render(request, "polls/detail.html", {"question": question})
+        ```
+    - [x] redirect to typst article wiki page
+        - [x] modify sqlite3 db
+        - [x] remove duplicates
+            * `SELECT * FROM cards_article;`
+            * `SELECT * FROM cards_article WHERE id = 33;`
+            * `DELETE FROM cards_article WHERE id = 33;`
+
+    - [x] redirect to djangopwa article wiki page
         - [ ] Content in View
+            - [ ] update model to have category
             - [ ] iframe for typ html
                 * cf `https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe`
 

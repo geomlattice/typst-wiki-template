@@ -19,7 +19,7 @@ class ArticleDetailViewModel:
 
     def _get_lastmod(self):
         if self._article:
-            return self._article._lastmod
+            return self._article.lastmod
         return "sqrt(-1)"
 
     @property 
@@ -64,10 +64,18 @@ class IndexGenerator:
             #print(link_category, link_article)
             data_before["category"] = link_category
             #drop the `*.html`
-            data_before["wikititle"] = link_article.split(".html")[0]
+            wikititle = link_article.split(".html")[0]
+            data_before["wikititle"] = wikititle
+
+            #TODO: check that object does not exist yet
+            #TODO: handle when lastmod has changed to ensure update
+                #TODO: to override or to overlay? 
+                    #TODO: to suffer the slings and arrows
+                    #TODO: of data deletion or data overload?
+
+            #Commenting out now that these are in the db and the data will not change during testing
+            #Article.objects.create(article_title=wikititle, lastmod=data_before["lastmod"])
             return data_before
 
         processed_data = [preprocess(i) for i in full_list]
         return processed_data
-
-

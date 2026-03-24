@@ -9,11 +9,17 @@ digraph {
   /* c [label="login screen"]
   d [label="username"]
   e [label="password"] */
-  f [label="filedata JSON"]
+  f [label="sitemap.xml"]
+  g [label="filedata JSON"]
+  h [label="wikiarticle model"]
+  i [label="page redirect"]
   
   a -> b
   /* b -> c
   c -> d [dir="back"]
   c -> e [dir="back"] */
   b -> f
+  f -> g
+  g -> h
+  h -> i
 }
