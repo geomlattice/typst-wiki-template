@@ -9,7 +9,7 @@ def home(request):
     #view_model = update_index() 
     view_model = IndexGenerator() 
     #print(view_model.jsonindex)
-    print(view_model.indexlist)
+    #print(view_model.indexlist)
     context = {
             'view_model': view_model
             }
