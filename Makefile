@@ -39,3 +39,6 @@ upload:
 	git add src/*
 	git commit -m "$(msg)"
 	git push
+
+writewiki:
+	bash utils/tui/navdir.sh
