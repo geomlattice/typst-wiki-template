@@ -34,4 +34,43 @@ One of the more consequential results in theoretical computer science is the Bü
 [In formal language theory, the Büchi–Elgot–Trakhtenbrot theorem states that a language is regular if and only if it can be defined in monadic second-order logic (MSO): for every MSO formula, we can find a finite-state automaton defining the same language, and for every finite-state automaton, we can find an MSO formula defining the same language. The theorem is due to Julius Richard Büchi #cite(<Buchi_1960>), Calvin Elgot #cite(<Elgot_1961>), and Boris Trakhtenbrot #cite(<Trakhtenbrot_1966>).
 ])
 
+More is to be said on formal language and dual finite automata. In so far as graphs `G=(V,E)` describe or encode finite state automata, we should admit such math immediately into a theory of linguistics or any gander at semiotics. 
+
+Constructive Set Theory paired with graphs `G=(V,E)` tends towards a very powerful expressive manner of thinking and speaking. Two places to begin with towards utilizing such a calculus of logic are the Universal Quantifier and Existential Quantifier. 
+
+#let universalquantifer = link("https://en.wikipedia.org/w/index.php?title=Universal_quantification&oldid=1349152560")[Wikipedia: Universal quantification]
+
+#bquotelink(universalquantifer, 
+[
+  In mathematical logic, a universal quantification is a type of quantifier, a logical constant which is interpreted as "given any", "for all", "for every", or "given an arbitrary element". It expresses that a predicate can be satisfied by every member of a domain of discourse. In other words, it is the predication of a property or relation to every member of the domain. It asserts that a predicate within the scope of a universal quantifier is true of every value of a predicate variable.
+
+  It is usually denoted by the turned A (∀) logical operator symbol, which, when used together with a predicate variable, is called a universal quantifier ("∀x", "∀(x)", or sometimes by "(x)" alone). Universal quantification is distinct from existential quantification ("there exists"), which only asserts that the property or relation holds for at least one member of the domain.
+])
+
+Regarding the Existential Quantifier:
+
+#let existentialquantifier = link("https://en.wikipedia.org/w/index.php?title=Existential_quantification&oldid=1347481322")[Wikipedia: Existential quantification]
+
+#bquotelink(existentialquantifier, 
+[
+  In predicate logic, an existential quantification is a type of quantifier which asserts the existence of an object with a given property. It is usually denoted by the logical operator symbol ∃, which, when used together with a predicate variable, is called an existential quantifier ("∃x" or "∃(x)" or "(∃x)"[1]), read as "there exists", "there is at least one", or "for some". Existential quantification is distinct from universal quantification ("for all"), which asserts that the property or relation holds for all members of the domain
+])
+
+Using these two concepts one can construct SQL queries which allows for a form of database operation:
+
+#let domainrelationalcalculus = link("https://en.wikipedia.org/w/index.php?title=Domain_relational_calculus&oldid=1317987872")[Wikipedia: Domain Relational Calculus]
+
+#bquotelink(domainrelationalcalculus, 
+[
+  In computer science, domain relational calculus (DRC) is a calculus that was introduced by Michel Lacroix and Alain Pirotte as a declarative database query language for the relational data model.
+
+  This language uses the same operators as tuple calculus, the logical connectives ∧ (and), ∨ (or) and ¬ (not). The existential quantifier (∃) and the universal quantifier (∀) can be used to bind the variables.
+  
+  Its computational expressiveness is equivalent to that of relational algebra
+  //TODO: show set theory example
+])
+
+//TODO: remove after adding set theory example
+The above quote is followed by an example of how to convert a set theory description into a SQL query. This ability, once practiced well, would allow scribbling on napkins to convey computer operations that when written out as SQL would work immediately for source code in software creation. A calculus tends to afford simpler operations to do much more challenging work, and the domain relational calculus which admits set theory expression of SQL queries is no disappointment to such a claim.
+
 #bibliography("shared.bib")
