@@ -32,6 +32,7 @@ Soon, a Search Engine will be implemented over the text files before compilation
 == General Topics
 - #link("topics/linear-algebra.html")[Linear Algebra]
 - #link("topics/continued-fractions.html")[Continued Fractions]
+- #link("topics/neural-networks.html")[Neural Networks]
   === Scholastic Reductions
   - #link("scholastic/continued_fractions-0201135108.html")[Continued Fractions: Analytic Theory and Applications]
   - #link("scholastic/continued_fractions_and_chaos-10_1080-00029890_1992_11995835.html")[Continued Fractions and Chaos]
