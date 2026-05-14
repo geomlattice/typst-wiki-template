@@ -1,5 +1,33 @@
 # TODO
 
+### Styling and Featurization 
+
+- [ ] Booststrap Overhaul
+
+- [ ] Explore Citations
+- [ ] Move Quote Structures to lib.typ/template.typ
+- [ ] Move Citation Structures to lib.typ/template.typ
+- [ ] Try Images, Sounds, and Videos - GIFS
+- [ ] Explore Data
+	- [ ] Explore Plotting and Visualization
+	1. https://github.com/cetz-package/cetz
+    - [ ] Explore matrices and vectors
+    1. https://typst.app/universe/package/numty/
+- [ ] Explore WebAssembly Plugins
+- [ ] Publish Template
+
+
+- [ ] (frozen) Django Model View Viewmodel
+    - [ ] Model
+        - [x] hand annotate `sitemap.xml`
+    - [ ] Viewmodel
+        - [ ] process page info
+            * build upon `curl https://geomlattice.github.io/typst-wiki-template/sitemap.xml | xq -j`
+    - [ ] View
+        - [ ] display pages in table
+
+### Groundwork
+
 - [x] Add Back Button
 - [x] html render of code
 - [x] html render of math
@@ -12,21 +40,12 @@
 - [x] update li in scholastic reduction
 - [x] fix container to use tailwindcss
 
-- [ ] update tailwindcss
+- [ ] (frozen) update tailwindcss
     - [x] add spacing between paragraphs
     - [x] style headings
     - [ ] highlight links blue, visited links purple
 
-- [ ] Django Model View Viewmodel
-    - [ ] Model
-        - [x] hand annotate `sitemap.xml`
-    - [ ] Viewmodel
-        - [ ] process page info
-            * build upon `curl https://geomlattice.github.io/typst-wiki-template/sitemap.xml | xq -j`
-    - [ ] View
-        - [ ] display pages in table
-
-- [ ] explore webassembly
+- [ ] (frozen) explore webassembly
     - [x] test python wasm in typst
         - [x] try and fail
         - [ ] write up
@@ -45,16 +64,4 @@
         - [ ] CGI triggers
     - [ ] test pyterrier in webassembly
         - [_] rewrite pyterrier in typst/webassembly?
-
-- [ ] Explore Citations
-- [ ] Move Quote Structures to lib.typ/template.typ
-- [ ] Move Citation Structures to lib.typ/template.typ
-- [ ] Try Images, Sounds, and Videos - GIFS
-- [ ] Explore Data
-	- [ ] Explore Plotting and Visualization
-	1. https://github.com/cetz-package/cetz
-    - [ ] Explore matrices and vectors
-    1. https://typst.app/universe/package/numty/
-- [ ] Explore WebAssembly Plugins
-- [ ] Publish Template
 
